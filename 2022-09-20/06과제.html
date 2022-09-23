@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" alt="" id="abc" />
+    <!-- <img
+      src="https://i.pinimg.com/474x/52/99/ec/5299ec6867dc32aa47b4e12d3c404db4.jpg"
+      alt="4"
+    />
+    <img
+      src="https://i.pinimg.com/474x/f3/9d/0e/f39d0e1c98ab820b46ecd08ee5bddb4f.jpg"
+      alt="5
+    />
+    <img
+      src="https://mblogthumb-phinf.pstatic.net/20100315_297/nadyssey_126866235197925Q8p_jpg/4_nadyssey.jpg?type=w2"
+      alt="6
+    />
+    <img
+      src="https://i.pinimg.com/474x/55/a0/ae/55a0ae47d75095a0f1128ff6a39fff4f.jpg"
+      alt="7
+    />
+    <img
+      src="https://i.pinimg.com/474x/bf/63/89/bf6389880c92fbe98f01f70ddcacc7df.jpg"
+      alt=""8
+    />
+    <img
+      src="https://i.pinimg.com/474x/65/80/d8/6580d84fde79b096a277e48617ee74cf.jpg"
+      alt=""9
+    />
+    <img
+      src="https://i.pinimg.com/474x/31/86/54/318654ee21488fe38b810828789e9329.jpg"
+      alt=""10
+    />
+    <img
+      src="https://i.pinimg.com/474x/32/af/38/32af38b9e1e772a0671418abea59b188.jpg"
+      alt=""11
+    />
+    <img
+      src="https://mblogthumb-phinf.pstatic.net/20100315_257/nadyssey_1268662353725P3o5l_jpg/10_nadyssey.jpg?type=w2"
+      alt=""0
+    />
+    <img
+      src="https://mblogthumb-phinf.pstatic.net/20100315_271/nadyssey_1268662354186CcfzK_jpg/11_nadyssey.jpg?type=w2"
+      alt=""1
+    />
+    <img
+      src="https://mblogthumb-phinf.pstatic.net/20100315_255/nadyssey_1268662354749HUhnd_jpg/12_nadyssey.jpg?type=w2"
+      alt=""2
+    />
+    <img
+      src="https://mblogthumb-phinf.pstatic.net/20100315_93/nadyssey_1268662354978tz4C8_jpg/13_nadyssey.jpg?type=w2"
+      alt=""3
+    /> -->
+
+    <script>
+      const year = prompt("태어난 연도를 입력해주세요!");
+      const e = year % 12;
+      let images = document.getElementById("abc");
+
+      if (e == 0) {
+        images.src =
+          "https://mblogthumb-phinf.pstatic.net/20100315_257/nadyssey_1268662353725P3o5l_jpg/10_nadyssey.jpg?type=w2";
+        result = "원숭이";
+      } else if (e == 1) {
+        images.src =
+          "https://mblogthumb-phinf.pstatic.net/20100315_271/nadyssey_1268662354186CcfzK_jpg/11_nadyssey.jpg?type=w2";
+
+        result = "닭";
+      } else if (e == 2) {
+        images.src =
+          "https://mblogthumb-phinf.pstatic.net/20100315_255/nadyssey_1268662354749HUhnd_jpg/12_nadyssey.jpg?type=w2";
+
+        result = "개";
+      } else if (e == 3) {
+        images.src =
+          "https://mblogthumb-phinf.pstatic.net/20100315_93/nadyssey_1268662354978tz4C8_jpg/13_nadyssey.jpg?type=w2";
+        result = "돼지";
+      } else if (e == 4) {
+        images.src =
+          "https://i.pinimg.com/474x/52/99/ec/5299ec6867dc32aa47b4e12d3c404db4.jpg";
+        result = "쥐";
+      } else if (e == 5) {
+        images.src =
+          "https://i.pinimg.com/474x/f3/9d/0e/f39d0e1c98ab820b46ecd08ee5bddb4f.jpg";
+        result = "소";
+      } else if (e == 6) {
+        images.src =
+          "https://mblogthumb-phinf.pstatic.net/20100315_297/nadyssey_126866235197925Q8p_jpg/4_nadyssey.jpg?type=w2";
+        result = "호랑이";
+      } else if (e == 7) {
+        images.src =
+          "https://i.pinimg.com/474x/55/a0/ae/55a0ae47d75095a0f1128ff6a39fff4f.jpg";
+
+        result = "토끼";
+      } else if (e == 8) {
+        images.src =
+          "https://i.pinimg.com/474x/bf/63/89/bf6389880c92fbe98f01f70ddcacc7df.jpg";
+        result = "용";
+      } else if (e == 9) {
+        images.src =
+          "https://i.pinimg.com/474x/65/80/d8/6580d84fde79b096a277e48617ee74cf.jpg";
+        result = "뱀";
+      } else if (e == 10) {
+        images.src =
+          "https://i.pinimg.com/474x/31/86/54/318654ee21488fe38b810828789e9329.jpg";
+        result = "말";
+      } else if (e == 11) {
+        images.src =
+          "https://i.pinimg.com/474x/32/af/38/32af38b9e1e772a0671418abea59b188.jpg";
+        result = "양";
+      }
+      alert(`${year}년에 태어났다면 ${result}띠입니다!`);
+    </script>
+  </body>
+</html>
