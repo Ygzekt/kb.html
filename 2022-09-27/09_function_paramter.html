@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function musum(...items) {
+        let sum = 0;
+        for (const iterator of items) {
+          sum += iterator;
+        }
+        console.log("총합=" + sum);
+      }
+      function musum2() {
+        let sum = 0;
+        for (const iterator of arguments) {
+          sum += iterator;
+        }
+        console.log(`총합 : ${sum}`);
+      }
+      mysum(1, 2, 3);
+      mysum(1, 2, 3, 4);
+
+      function mypower(a = 1) {
+        if (a == 1) console.log(1);
+        else console.log(a * a);
+      }
+      mypower();
+      mypower(10);
+
+      function justprint(...items) {
+        console.log(items);
+      }
+      const arr = [1, 2, 3, 4, 5];
+      justprint(arr);
+      justprint(...arr);
+    </script>
+  </body>
+</html>

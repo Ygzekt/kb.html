@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="03_jq.js"></script>
+  </head>
+  <body>
+    <h1>박스오피스 탑 10</h1>
+    <p>최신영화</p>
+    <div class="boxoffice">
+      <h2 class="boxOfficeType"></h2>
+      <p class="showRamge"></p>
+      <ul class="boxOfficeList"></ul>
+    </div>
+    <script>
+      //영화진흥위원회 api에서 코드 가져와서 const key에 넣기
+      $(function () {
+        const key = "";
+        const uri =
+          "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.xml";
+        const apiurl = `${url}?key=${key}&targetDt=20220927`;
+        console.log(apiurl);
+
+        const boxOfficeType = $(".boxOfficeType");
+        const showRamge = $(".showRamge");
+        const myUI = $("boxOfficeList");
+
+        $.ajax({
+          url: apiurl,
+          dataType: "json",
+          success: function (result) {
+            console.log(result);
+            const jsonObj = result;
+            const boxofficeResult = jsonObj["boxofficeResult"];
+            const movieList = boxofficeResult["dailyBoxOfficeList"];
+
+            boxOfficeType.text(boxofficeResult["boxOfficeType"]);
+            showRamge.text(boxofficeResult["showRamge"]);
+
+            $(movieList).each(function (index, element) {
+              const myLi = $("<li></li>");
+              const myDiv = $("<div></div>");
+              const mh2 = $("<h2></h2>");
+              const mp1 = $("<p></p>");
+              const mp2 = $("<p></p>");
+              const mp3 = $("<p></p>");
+              mh2.text(element["movieNm"]);
+              mp1.text("개봉일:" + element["openDt"]);
+              mp2.text("누적관객수:" + element["audiAcc"]);
+              mp3.text("순위 변동:" + element["rankInten"]);
+
+              myLi.append(myDiv);
+              myDiv.append(mh2);
+              myDiv.append(mp1);
+              myDiv.append(mp2);
+              myDiv.append(mp3);
+              myUl.append(myLi);
+            });
+          },
+          error: () => {
+            console.log("error");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
